@@ -1,0 +1,185 @@
+// ul{
+//     padding: 0px;
+//     margin: 0px;;
+//     list-style-type: none;
+//     background-color: #333333;
+// }
+
+// $nav-height : 50px;
+// $link-padding : 30px;
+
+// li {
+//     display: inline-block;
+//     width: auto;
+//     height: $nav-height;
+//     text-align: center;
+//     line-height: $nav-height;
+//     // border-right: 1px solid #f1f1f1;
+    
+//     a {
+//         display: block; 
+//         text-decoration: none;
+//         font-size: large;
+//         color: white;
+//         padding-left: $link-padding;
+//         padding-right: $link-padding;
+//     }
+// }
+
+// .left-nav {
+//     float: right;    
+// }
+// li:hover {
+//     background-color: #222;
+//     cursor: pointer;
+// }
+
+
+// .active {
+//     background-color: #222;
+// }
+
+
+// h1 {
+//     padding: 2%;
+//     margin: 0 auto;;
+//     text-align: center;
+//     //background-color: aqua;
+// }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #010C38;
+}
+header {
+    border-bottom: 1px solid black;
+    user-select: none; /* Propriété standard */
+    animation: apparition 2s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) ;
+    }
+}
+
+
+li a button {
+    font-family:'Roboto', cursive;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8%;
+}
+
+a {
+    padding-left: 10px;
+    padding-right: 10px;;
+}
+
+.nav_links {
+    list-style: none;
+    font-size: 20px;
+    font-family:'Sriracha', cursive;
+
+    li {
+        display: inline-block;
+        padding: 0px 20px;
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+            background: linear-gradient(to top, rgba(255,0,0,0.5) 0%, rgba(255,0,0,0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+            transition: background-size .3s;
+        }
+
+        a:hover {
+            color: #445F7E;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+.user {
+    button p{
+        margin-top: 5px;
+        float: right;
+        color: white;
+    }
+
+    button, a {
+        font-size: small;
+        font-family:'Roboto', cursive;
+        text-decoration: none;
+        padding: 4px 5%;
+        cursor:pointer;
+        border-radius: 10px;
+        border: none;
+        // background: #575556;
+        background: rgb(87,85,86);
+        background: linear-gradient(180deg, rgba(87,85,86,1) 0%, rgba(148,145,147,1) 42%, rgba(152,122,102,1) 77%);
+        color: white;
+    }
+    button:hover {
+        background: linear-gradient(45deg, rgb(236, 139, 74) 0%, rgb(207, 117, 78) 43%, rgb(250, 183, 124) 100%);
+    }
+}
+
+.user a:hover {
+    background: linear-gradient(45deg, rgb(236, 139, 74) 0%, rgb(207, 117, 78) 43%, rgb(250, 183, 124) 100%);
+}
+
+h1 {
+    font-family:'Roboto', cursive;
+    animation: apparition 3s ease-out;
+}
+
+.logout {
+    display: flex;
+    img{
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    
+    .logout {
+        display: flex;
+        margin: auto;
+
+        img {
+            height: 25px;
+        }
+        p {
+            font-size: 11px;
+        }
+    }
+
+    nav, div {
+        padding-top: 10px;
+    }
+
+    h1 {
+        padding-bottom: 5px;
+    }
+}

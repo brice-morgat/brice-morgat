@@ -1,0 +1,48 @@
+<header class="sticky-top" style="background-color: white;">
+    <h1> Brice Morgat </h1>
+    <nav>
+        <ul class="nav_links">
+            <li>
+                <a routerLink=""><img src="../../assets/images/brice-morgat/icon_home.png" style="float: left;">
+                    ACCUEIL
+                </a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="/articles"><img src="../../assets/images/brice-morgat/icon_news.png" style="float: left;">
+                    ARTICLE
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="user">
+        <a routerLink="/connexion" routerLinkActive="active" *ngIf="!isAuth">CONNEXION</a>
+        <a routerLink="/inscription" routerLinkActive="active" *ngIf="!isAuth">INSCRIPTION</a>
+        <button (click)="onSignOut()" *ngIf="isAuth" class="logout">
+            <img src="../../assets/images/brice-morgat/icon_logOut.png" style="float: left;">
+            <p>DÉCONNEXION</p>
+        </button>
+    </div>
+</header>
+
+
+
+
+<!-- <nav>
+    <ul>
+        <li>
+            <a routerLink="">Accueil</a>
+        </li>
+        <li routerLinkActive="active" class="left-nav">
+            <a routerLink="/articles">Article</a>
+        </li>
+        <li routerLinkActive="active" class="left-nav" *ngIf="!isAuth">
+            <a routerLink="/connexion">Connexion</a>
+        </li>
+        <li routerLinkActive="active" class="left-nav" *ngIf="!isAuth">
+            <a routerLink="/inscription">Inscription</a>
+        </li>
+        <li class="left-nav" *ngIf="isAuth">
+            <a (click)="onSignOut()">Déconnexion</a>
+        </li>
+    </ul>
+</nav> -->

@@ -1,0 +1,62 @@
+#no-comment {
+    font-size: small;
+    font-family:'Roboto', cursive;
+    text-decoration: none;
+    padding: 4px 2%;
+    margin-left: 10px;
+    cursor:pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgb(87,85,86);
+    background: linear-gradient(180deg, rgba(87,85,86,1) 0%, rgba(148,145,147,1) 42%, rgba(152,122,102,1) 77%);
+    color: white;
+}
+
+#no-comment:hover {
+    background: linear-gradient(45deg, rgb(236, 139, 74) 0%, rgb(207, 117, 78) 43%, rgb(250, 183, 124) 100%);
+}
+
+.center {
+    text-align: center;
+    #date {
+        color: rgb(179, 60, 45);
+    }
+}
+
+#miniature {
+    text-align: center;
+    width: 80%;
+    max-height: min-content;
+}
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,.3);
+}
+
+#article {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#commentaire {
+    text-align: center;
+    justify-content: center;
+    object-fit: cover;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,.3);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    div {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}

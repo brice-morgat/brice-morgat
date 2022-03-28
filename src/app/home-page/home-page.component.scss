@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//Carousel config
+
+img {
+  display:block;
+  width: 100%;
+}
+
+.carousel-caption {
+  margin-bottom: 20px;
+  animation: apparition 3s ease-out;
+}
+
+#picture1 {
+  background-image: url("https://lh3.googleusercontent.com/gpXpMNLYh1NGj0xJqFjBsx70J8Tqmnq8TFgOcf1mdQE0omN_gpxEKGYvqvucefAi7L2X5Z4Vo7lsgioe=s1600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: max(40vw);
+}
+#picture2 {
+  background-image: url("https://lh3.googleusercontent.com/gpXpMNLYh1NGj0xJqFjBsx70J8Tqmnq8TFgOcf1mdQE0omN_gpxEKGYvqvucefAi7L2X5Z4Vo7lsgioe=s1600");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding-bottom: max(40vw);
+}
+#picture3 {
+  background-image: url("https://lh3.googleusercontent.com/gpXpMNLYh1NGj0xJqFjBsx70J8Tqmnq8TFgOcf1mdQE0omN_gpxEKGYvqvucefAi7L2X5Z4Vo7lsgioe=s1600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: max(40vw);
+}
+
+@keyframes apparition {
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px) ;
+  }
+}
+
+//Gallery
+
+#center-grid-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.grille {
+  justify-content: center;
+  max-width: 1300px;
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  border-radius: 10px;
+  width: 600px;
+  height: 337px;
+  background-color: #333;
+
+  p{
+    color: white;
+    margin-top: 52%;
+    margin-left: 10px;
+    font-weight: 500;
+    background-color: rgba(#111, .8);
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: fit-content;
+  }
+}
+
+#one {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/defender.png');
+}
+
+#two {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/runner.png');
+}
+
+#three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/sokoban.png');
+}
+
+#fourth {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/piecejointe.png');
+}
+
+
+.grille {
+  justify-content: center;
+  max-width: 1300px;
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px);
+  grid-gap: 20px;
+}
+
+//Projet Bac Lycée
+
+.grille-bac {
+  justify-content: center;
+  max-width: 100%;
+  width: 90%;
+  height: auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 800px);
+  grid-gap: 10px;
+}
+
+.grid-item-bac {
+  border-radius: 10px;
+  width: 800px;
+  height: 450px;
+  background-color: #333;
+  p{
+    color: white;
+    margin-top: 52%;
+    margin-left: 10px;
+    font-weight: 500;
+    background-color: rgba(#111, .8);
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: fit-content;
+  }
+}
+
+#one-bac {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/camhunter-desktop.png');
+}
+
+#two-bac {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/camhunyrt.PNG');
+}
+
+#three-bac {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/camhunter-bac.jpg');
+}
+
+#fourth-bac {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/lycee.PNG');
+}
+
+//Projet perso
+
+.grille-project {
+  justify-content: center;
+  max-width: 100%;
+  width: 90%;
+  height: auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 800px);
+  grid-gap: 10px;
+}
+
+.grid-item-project {
+  border-radius: 10px;
+  width: 800px;
+  height: 450px;
+  background-color: #333;
+
+  p{
+    color: white;
+    margin-top: 52%;
+    margin-left: 10px;
+    font-weight: 500;
+    background-color: rgba(#111, .8);
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: fit-content;
+  }
+}
+
+#one-project {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/sao.PNG');
+}
+
+#two-project {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/navigateur.PNG');
+}
+
+#three-project {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../assets/images/brice-morgat/aika-home.jpg');
+}
+
+#fourth-project {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/aika-gameplay.jpg');
+}
+
+#five-project {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/jeu.PNG');
+}
+
+#six-project {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/jeu\ horreur.PNG');
+}
+
+#seven-project {
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/brice-morgat/Capture.PNG');
+}
+
+
+#center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+  
+
+  
+.grille {
+  height: auto;
+  grid-template-columns: repeat(auto-fill, 350px);
+}
+
+.grid-item {
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  background-color: #333;
+}
+
+//Projet perso mobile
+
+.grille-project {
+  height: auto;
+  grid-template-columns: repeat(auto-fill, 350px);
+}
+
+.grid-item-project {
+  width: 350px;
+  height: auto;
+}
+
+
+.grille-bac {
+  height: auto;
+  grid-template-columns: repeat(auto-fill, 350px);
+}
+
+.grid-item-bac {
+  width: 350px;
+  height: auto;
+}
+
+
+#picture1 {
+  padding-bottom: 80vw;
+}
+
+
+#picture2 {
+  padding-bottom: 80vw;
+}
+
+#picture3 {
+  padding-bottom: 80vw;
+}
+}

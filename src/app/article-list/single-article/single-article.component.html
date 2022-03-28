@@ -1,0 +1,49 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+<div class="container" id="article">
+    <h1 class="center">{{ article.title }}</h1>
+    <div class="center">
+        <h5>De : {{ article.author }} </h5>
+        <h3 id="date">{{ article.date }}</h3>
+    </div>
+    <div class="center">
+        <img *ngIf="article.photo" [src]="article.photo" id="miniature">
+    </div>
+    <div [innerHTML]="article.content"></div>
+    <button class="btn btn-primary" (click)="onBack()">Retour</button>
+</div>
+
+
+
+
+<div class="container list-group">
+    <div>
+        <h3>Commentaires :</h3>
+        <div *ngFor="let comments of articleList; let i = index;" id="commentaire">
+            <h4>
+                {{comments.author}}
+                <!-- <button (click)="onDeleteArticle(article)">Supprimer</button> -->
+                <button (click)="onDeleteComment(comments)" *ngIf="user() == 'bricougeak@gmx.fr'">Supprimer</button>
+            </h4>
+            <div [innerHTML]='comments.content'></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h4>Écrire un commentaire :</h4>
+    <form [formGroup]="commentForm" (ngSubmit)="onSaveComment()" *ngIf="isUserAuth()">
+        <label for="title">Titre :</label>
+        <input type="text" id="title" formControlName="title" class="form-control">
+
+        <label for="articleText">Texte :</label>
+        <textarea type="text" id="articleText" formControlName="articleText" class="form-control" rows="3"></textarea>
+
+        <button [disabled]="commentForm.invalid" type="submit" class="btn btn-primary">Enregister</button>
+    </form>
+
+    <a routerLink="/connexion" routerLinkActive="active" *ngIf="!isUserAuth()" id="no-comment">Se connecter</a>
+    <a routerLink="/inscription" routerLinkActive="active" *ngIf="!isUserAuth()" id="no-comment">S'inscrire</a>
+</div>
